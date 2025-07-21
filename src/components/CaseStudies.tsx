@@ -162,13 +162,14 @@ export default function CaseStudies() {
                   <span className="text-sm text-neutral-charcoal">
                     <strong>Timeline:</strong> {study.timeline}
                   </span>
-                  <motion.button
+                  <motion.a
+                    href="/case-studies"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-2 text-primary-blue font-semibold hover:text-primary-navy transition-colors"
                   >
                     View Full Case Study <ArrowRight size={16} />
-                  </motion.button>
+                  </motion.a>
                 </div>
               </div>
 
@@ -203,20 +204,22 @@ export default function CaseStudies() {
             Join our growing list of successful clients who have transformed their businesses with our solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button 
+            <motion.a
+              href="/consultation"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-accent-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="inline-block bg-accent-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
             >
               Start Your Project
-            </motion.button>
-            <motion.button 
+            </motion.a>
+            <motion.a
+              href="/case-studies"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-primary-navy text-primary-navy hover:bg-primary-navy hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="inline-block border-2 border-primary-navy text-primary-navy hover:bg-primary-navy hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
             >
               View All Case Studies
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>

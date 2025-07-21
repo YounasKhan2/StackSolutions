@@ -20,7 +20,7 @@ const navigation = [
     },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Blog', href: '/#blog' },
 ]
 
 export default function Header() {
@@ -69,14 +69,17 @@ export default function Header() {
                                         onMouseEnter={() => setActiveDropdown(item.name)}
                                         onMouseLeave={() => setActiveDropdown(null)}
                                     >
-                                        <button className={`flex items-center space-x-1 px-3 py-2 rounded-lg font-semibold transition-colors ${isActive(item.href)
+                                        <Link
+                                            href={item.href}
+                                            className={`flex items-center space-x-1 px-3 py-2 rounded-lg font-semibold transition-colors ${isActive(item.href)
                                                 ? 'text-primary-blue bg-blue-50'
                                                 : 'text-neutral-charcoal hover:text-primary-blue hover:bg-gray-50'
-                                            }`}>
+                                            }`}
+                                        >
                                             <span>{item.name}</span>
                                             <ChevronDown size={16} className={`transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''
                                                 }`} />
-                                        </button>
+                                        </Link>
 
                                         <AnimatePresence>
                                             {activeDropdown === item.name && (

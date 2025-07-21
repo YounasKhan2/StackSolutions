@@ -14,7 +14,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -24,29 +24,35 @@ export default function Home() {
               Stack<span className="text-primary-blue">Solutions</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-charcoal mb-8 max-w-3xl mx-auto leading-relaxed">
-              We don't just build software—we craft digital experiences that drive real business growth. 
+              We don't just build software—we craft digital experiences that drive real business growth.
               From startups to Fortune 500 companies, we've helped over 50 businesses transform their operations with innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <motion.button 
+              <motion.a
+                href="/consultation"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-accent-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 transition-colors"
               >
                 Start Your Project <ArrowRight size={20} />
-              </motion.button>
-              <motion.button 
+              </motion.a>
+              <motion.a
+                href="#case-studies"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-primary-navy text-primary-navy hover:bg-primary-navy hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+                onClick={(e) => {
+                  e.preventDefault()
+                  document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })
+                }}
               >
                 View Our Work
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
 
           {/* Services Preview */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -77,19 +83,29 @@ export default function Home() {
       </section>
 
       {/* Industries We Serve */}
-      <IndustriesSection />
+      <div id="industries">
+        <IndustriesSection />
+      </div>
 
       {/* Our Process */}
-      <ProcessTimeline />
+      <div id="process">
+        <ProcessTimeline />
+      </div>
 
       {/* Client Testimonials */}
-      <TestimonialsSection />
+      <div id="testimonials">
+        <TestimonialsSection />
+      </div>
 
       {/* Case Studies */}
-      <CaseStudies />
+      <div id="case-studies">
+        <CaseStudies />
+      </div>
 
       {/* Blog & Resources */}
-      <BlogSection />
+      <div id="blog">
+        <BlogSection />
+      </div>
     </main>
   )
 }

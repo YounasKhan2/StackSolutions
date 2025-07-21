@@ -124,13 +124,14 @@ export default function ProcessTimeline() {
           <p className="text-lg text-neutral-charcoal mb-6">
             Let's discuss your requirements and create a custom development plan.
           </p>
-          <motion.button 
+          <motion.a
+            href="/consultation"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-accent-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            className="inline-block bg-accent-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
           >
             Schedule Consultation
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>

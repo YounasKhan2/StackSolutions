@@ -103,13 +103,14 @@ export default function IndustriesSection() {
           <p className="text-lg text-neutral-charcoal mb-6">
             Don't see your industry? We adapt our solutions to meet any business need.
           </p>
-          <motion.button 
+          <motion.a
+            href="/contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-primary-navy hover:bg-primary-blue text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            className="inline-block bg-primary-navy hover:bg-primary-blue text-white px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Discuss Your Project
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>
