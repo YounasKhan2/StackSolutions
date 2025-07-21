@@ -55,6 +55,8 @@ import SkipToContent from '@/components/SkipToContent'
 import Analytics, { GoogleAnalytics } from '@/components/Analytics'
 import MobileOptimization from '@/components/MobileOptimization'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { Suspense } from 'react'
 
 export default function RootLayout({
@@ -69,9 +71,11 @@ export default function RootLayout({
       </head>
       <body className="font-open-sans antialiased">
         <SkipToContent />
-        <div id="main-content">
+        <Header />
+        <div id="main-content" className="pt-16 lg:pt-20">
           {children}
         </div>
+        <Footer />
         <Suspense fallback={null}>
           <Analytics />
         </Suspense>
