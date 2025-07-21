@@ -5,6 +5,8 @@ import { ArrowRight, Code, Smartphone, Zap, TrendingUp } from 'lucide-react'
 import IndustriesSection from '../components/IndustriesSection'
 import ProcessTimeline from '../components/ProcessTimeline'
 import TestimonialsSection from '../components/TestimonialsSection'
+import CaseStudies from '../components/CaseStudies'
+import BlogSection from '../components/BlogSection'
 
 export default function Home() {
   return (
@@ -22,8 +24,8 @@ export default function Home() {
               Stack<span className="text-primary-blue">Solutions</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-charcoal mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your business with cutting-edge technology solutions. 
-              We specialize in full-stack development, mobile apps, AI automation, and digital transformation.
+              We don't just build software—we craft digital experiences that drive real business growth. 
+              From startups to Fortune 500 companies, we've helped over 50 businesses transform their operations with innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.button 
@@ -53,22 +55,22 @@ export default function Home() {
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <Code className="text-primary-blue mb-4" size={40} />
               <h3 className="font-inter font-semibold text-lg mb-2">Full-Stack Development</h3>
-              <p className="text-neutral-charcoal text-sm">Modern web applications built with the latest technologies</p>
+              <p className="text-neutral-charcoal text-sm">Scalable web applications that grow with your business—from MVP to enterprise-grade platforms</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <Smartphone className="text-primary-blue mb-4" size={40} />
               <h3 className="font-inter font-semibold text-lg mb-2">Flutter Mobile Apps</h3>
-              <p className="text-neutral-charcoal text-sm">Cross-platform mobile solutions for iOS and Android</p>
+              <p className="text-neutral-charcoal text-sm">Native-quality mobile experiences that reach both iOS and Android users with a single codebase</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <Zap className="text-primary-blue mb-4" size={40} />
               <h3 className="font-inter font-semibold text-lg mb-2">AI Automation</h3>
-              <p className="text-neutral-charcoal text-sm">Intelligent automation to streamline your business processes</p>
+              <p className="text-neutral-charcoal text-sm">Save 40+ hours weekly with intelligent automation that handles repetitive tasks seamlessly</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <TrendingUp className="text-primary-blue mb-4" size={40} />
               <h3 className="font-inter font-semibold text-lg mb-2">SEO Optimization</h3>
-              <p className="text-neutral-charcoal text-sm">Boost your online presence and search rankings</p>
+              <p className="text-neutral-charcoal text-sm">Increase organic traffic by 250%+ with our proven technical SEO and content strategies</p>
             </div>
           </motion.div>
         </div>
@@ -82,6 +84,12 @@ export default function Home() {
 
       {/* Client Testimonials */}
       <TestimonialsSection />
+
+      {/* Case Studies */}
+      <CaseStudies />
+
+      {/* Blog & Resources */}
+      <BlogSection />
     </main>
   )
 }
