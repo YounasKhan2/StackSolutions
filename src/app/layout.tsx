@@ -15,9 +15,47 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'StackSolutions - Professional Development Agency',
-  description: 'Professional software development agency specializing in full-stack web development, Flutter mobile apps, digital transformation, AI automation, and SEO optimization.',
+  metadataBase: new URL('https://stacksolutions.dev'),
+  title: 'StackSolutions - Professional Development Agency | Full-Stack Web & Mobile Development',
+  description: 'Transform your business with cutting-edge technology solutions. Expert full-stack web development, Flutter mobile apps, AI automation, and SEO optimization services.',
+  keywords: 'web development, mobile app development, Flutter, React, Next.js, AI automation, SEO optimization, digital transformation, software development agency',
+  authors: [{ name: 'StackSolutions Team' }],
+  creator: 'StackSolutions',
+  publisher: 'StackSolutions',
+  robots: 'index, follow',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://stacksolutions.dev',
+    siteName: 'StackSolutions',
+    title: 'StackSolutions - Professional Development Agency',
+    description: 'Transform your business with cutting-edge technology solutions. Expert development services for web, mobile, and AI automation.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'StackSolutions - Professional Development Agency',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'StackSolutions - Professional Development Agency',
+    description: 'Transform your business with cutting-edge technology solutions.',
+    images: ['/og-image.jpg'],
+    creator: '@stacksolutions',
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 }
+
+import SkipToContent from '@/components/SkipToContent'
+import Analytics, { GoogleAnalytics } from '@/components/Analytics'
+import MobileOptimization from '@/components/MobileOptimization'
+import PerformanceMonitor from '@/components/PerformanceMonitor'
+import { Suspense } from 'react'
 
 export default function RootLayout({
   children,
@@ -26,8 +64,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${openSans.variable}`}>
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className="font-open-sans antialiased">
-        {children}
+        <SkipToContent />
+        <div id="main-content">
+          {children}
+        </div>
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
+        <MobileOptimization />
+        <PerformanceMonitor />
       </body>
     </html>
   )

@@ -29,7 +29,7 @@ export default function CalculatorPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-navy to-primary-blue text-white py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -39,7 +39,7 @@ export default function CalculatorPage() {
               Project Cost Calculator
             </h1>
             <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
-              Get instant estimates for your development project. Our smart calculator 
+              Get instant estimates for your development project. Our smart calculator
               considers your specific requirements to provide accurate cost and timeline projections.
             </p>
           </motion.div>
@@ -98,18 +98,18 @@ export default function CalculatorPage() {
               Ready to Start Your Project?
             </h2>
             <p className="text-lg opacity-90 mb-8">
-              Our calculator provides estimates, but every project is unique. 
+              Our calculator provides estimates, but every project is unique.
               Let's discuss your specific requirements and provide a detailed proposal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-accent-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 Schedule Free Consultation
               </motion.button>
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white hover:bg-white hover:text-primary-navy px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
