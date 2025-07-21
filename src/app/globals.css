@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-navy: #1e3a8a;
+    --primary-blue: #3b82f6;
+    --accent-orange: #f97316;
+    --neutral-charcoal: #374151;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-inter);
+    font-weight: 600;
+  }
+  
+  body {
+    font-family: var(--font-open-sans);
+    color: var(--neutral-charcoal);
+  }
+}
