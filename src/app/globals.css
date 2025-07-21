@@ -4,20 +4,47 @@
 
 @layer base {
   :root {
-    --primary-navy: #1e3a8a;
-    --primary-blue: #3b82f6;
-    --accent-orange: #f97316;
-    --neutral-charcoal: #374151;
+    --primary-navy: #0f172a;
+    --primary-blue: #0ea5e9;
+    --accent-orange: #f59e0b;
+    --neutral-charcoal: #334155;
+    --background-light: #f8fafc;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-inter);
+    font-family: var(--font-poppins);
     font-weight: 600;
+    letter-spacing: -0.025em;
   }
   
   body {
-    font-family: var(--font-open-sans);
+    font-family: var(--font-source-sans);
     color: var(--neutral-charcoal);
+    background-color: var(--background-light);
+  }
+  
+  /* Premium font hierarchy */
+  .font-display {
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+  }
+  
+  .font-heading {
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+  
+  .font-body {
+    font-family: var(--font-source-sans);
+    font-weight: 400;
+  }
+  
+  .font-accent {
+    font-family: var(--font-inter);
+    font-weight: 500;
+    letter-spacing: 0.025em;
   }
   
   /* Smooth scrolling */

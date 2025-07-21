@@ -9,24 +9,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary-navy': '#1e3a8a',
-        'primary-blue': '#3b82f6',
-        'accent-orange': '#f97316',
-        'neutral-charcoal': '#374151',
+        'primary-navy': '#0f172a',
+        'primary-blue': '#0ea5e9',
+        'accent-orange': '#f59e0b',
+        'neutral-charcoal': '#334155',
+        'background-light': '#f8fafc',
         primary: {
-          navy: '#1e3a8a',
-          blue: '#3b82f6',
+          navy: '#0f172a',
+          blue: '#0ea5e9',
         },
         accent: {
-          orange: '#f97316',
+          orange: '#f59e0b',
         },
         neutral: {
-          charcoal: '#374151',
+          charcoal: '#334155',
         }
       },
       fontFamily: {
-        'inter': ['Inter', 'sans-serif'],
-        'open-sans': ['Open Sans', 'sans-serif'],
+        'inter': ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        'poppins': ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+        'source-sans': ['var(--font-source-sans)', 'system-ui', 'sans-serif'],
+        'display': ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+        'heading': ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+        'body': ['var(--font-source-sans)', 'system-ui', 'sans-serif'],
+        'accent': ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
     },
   },

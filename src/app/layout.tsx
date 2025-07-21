@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Open_Sans } from 'next/font/google'
+import { Inter, Poppins, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
 import React from 'react'
 const inter = Inter({ 
@@ -8,9 +8,17 @@ const inter = Inter({
   display: 'swap',
 })
 
-const openSans = Open_Sans({ 
+const poppins = Poppins({ 
   subsets: ['latin'],
-  variable: '--font-open-sans',
+  variable: '--font-poppins',
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+})
+
+const sourceSans = Source_Sans_3({ 
+  subsets: ['latin'],
+  variable: '--font-source-sans',
+  weight: ['300', '400', '600', '700'],
   display: 'swap',
 })
 
@@ -65,11 +73,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${openSans.variable}`}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable} ${sourceSans.variable}`}>
       <head>
         <GoogleAnalytics />
       </head>
-      <body className="font-open-sans antialiased">
+      <body className="font-source-sans antialiased">
         <SkipToContent />
         <Header />
         <div id="main-content" className="pt-16 lg:pt-20">

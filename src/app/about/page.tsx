@@ -62,7 +62,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-navy to-primary-blue text-white py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -72,7 +72,7 @@ export default function About() {
               About StackSolutions
             </h1>
             <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
-              We're a passionate team of developers and innovators dedicated to transforming 
+              We're a passionate team of developers and innovators dedicated to transforming
               businesses through cutting-edge technology solutions.
             </p>
           </motion.div>
@@ -108,7 +108,7 @@ export default function About() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -118,30 +118,30 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-xl text-neutral-charcoal leading-relaxed">
-                Founded in 2019, StackSolutions emerged from a simple belief: every business deserves 
+                Founded in 2019, StackSolutions emerged from a simple belief: every business deserves
                 access to world-class technology solutions that drive growth and innovation.
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="prose prose-lg max-w-none text-neutral-charcoal"
             >
               <p className="text-lg leading-relaxed mb-6">
-                What started as a small team of passionate developers has grown into a full-service 
-                development agency serving clients across the globe. We've helped startups launch 
+                What started as a small team of passionate developers has grown into a full-service
+                development agency serving clients across the globe. We've helped startups launch
                 their first products, assisted enterprises in digital transformation, and everything in between.
               </p>
               <p className="text-lg leading-relaxed mb-6">
-                Our approach combines technical expertise with business acumen, ensuring that every 
-                solution we deliver not only works flawlessly but also drives real business value. 
-                We stay at the forefront of technology trends, constantly learning and adapting to 
+                Our approach combines technical expertise with business acumen, ensuring that every
+                solution we deliver not only works flawlessly but also drives real business value.
+                We stay at the forefront of technology trends, constantly learning and adapting to
                 provide our clients with the most effective solutions.
               </p>
               <p className="text-lg leading-relaxed">
-                Today, we're proud to be trusted partners to businesses of all sizes, helping them 
+                Today, we're proud to be trusted partners to businesses of all sizes, helping them
                 navigate the digital landscape and achieve their goals through innovative technology solutions.
               </p>
             </motion.div>
@@ -152,7 +152,7 @@ export default function About() {
       {/* Our Values */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -191,7 +191,7 @@ export default function About() {
       {/* Team Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -249,7 +249,7 @@ export default function About() {
             <p className="text-lg opacity-90 mb-8">
               Let's discuss how we can help transform your business with innovative technology solutions.
             </p>
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-accent-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
