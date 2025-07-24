@@ -31,6 +31,21 @@ export const metadata: Metadata = {
   creator: 'StackSolutions',
   publisher: 'StackSolutions',
   robots: 'index, follow',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: '/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/safari-pinned-tab.svg',
+        color: '#3B82F6'
+      }
+    ]
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -66,6 +81,7 @@ import PerformanceMonitor from '@/components/PerformanceMonitor'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import LoadingStrategy from '@/components/LoadingStrategy'
+import CookieConsent from '@/components/CookieConsent'
 import { Suspense } from 'react'
 
 export default function RootLayout({
@@ -77,6 +93,14 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable} ${sourceSans.variable}`}>
       <head>
         <GoogleAnalytics />
+        {/* Favicon and App Icons */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#3B82F6" />
+        <meta name="msapplication-TileColor" content="#3B82F6" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
         {/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/poppins.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
@@ -102,6 +126,7 @@ export default function RootLayout({
         </Suspense>
         <MobileOptimization />
         <PerformanceMonitor />
+        <CookieConsent />
       </body>
     </html>
   )
