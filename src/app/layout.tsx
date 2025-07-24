@@ -65,6 +65,7 @@ import MobileOptimization from '@/components/MobileOptimization'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import LoadingStrategy from '@/components/LoadingStrategy'
 import { Suspense } from 'react'
 
 export default function RootLayout({
@@ -76,8 +77,20 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable} ${sourceSans.variable}`}>
       <head>
         <GoogleAnalytics />
+        {/* Preload critical resources */}
+        <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/poppins.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/source-sans-3.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {/* DNS prefetch for external resources */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        {/* Preconnect to critical origins */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="font-source-sans antialiased">
+        <LoadingStrategy />
         <SkipToContent />
         <Header />
         <div id="main-content" className="pt-16 lg:pt-20">
